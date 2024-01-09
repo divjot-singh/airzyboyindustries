@@ -75,6 +75,7 @@ export default function FormComponent() {
     return (
         <>
         <form onSubmit={handleButtonClick}>
+            <p>TOKLAS, Surrey St, Temple, London WC2R 2ND, 7PM</p>
             <div className="row input-row">
                 <input name="first-name" value={fName} type="text" id="first-name" placeholder="First name" onChange={onInputChange} required />
                 <input name="last-name" value={lName} type="text" id="last-name" placeholder="Last name" onChange={onInputChange} required />

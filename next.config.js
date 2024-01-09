@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
     env: {
-        GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+        GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
       },
     webpack: (config, { isServer }) => {
       if (!isServer) {

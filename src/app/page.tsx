@@ -10,9 +10,7 @@ export default function Home() {
   return (
     <>
     <div className="fullHeight landingPage">
-        <video autoPlay muted loop>
-            <source src="/Airzyboy_Industries_Logo.mp4" type="video/mp4" />
-        </video>
+          <img src="/Airzyboy_Industries_Logo.gif" alt="Logo" />
         <button onClick={handleButtonClick} className="form-button">CLICK HERE TO RSVP</button>
     </div>
     <div className="formContainer" id="form-container">
