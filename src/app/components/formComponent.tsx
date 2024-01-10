@@ -6,7 +6,7 @@ export default function FormComponent() {
     const [fName, setFname] = useState<string>('');
     const [lName, setLname] =useState<string>('');
     const [email, setEmail] = useState<string>('');
-    const [bringAGuest, setBringAGuest] = useState<boolean>(false);
+    //const [bringAGuest, setBringAGuest] = useState<boolean>(false);
     const toastConfig:ToastOptions = {
         position: "top-right",
         hideProgressBar: true,
@@ -27,7 +27,7 @@ export default function FormComponent() {
         setFname('');
         setLname('');
         setEmail('');
-        setBringAGuest(false);
+        //setBringAGuest(false);
         window.scrollTo({
             top:0,
             left:0,
@@ -45,14 +45,14 @@ export default function FormComponent() {
             case 'email':
                 setEmail(event.target.value);
                 break;
-            case 'bring-a-guest':
-                setBringAGuest(event.target.checked);
-                break;
+            // case 'bring-a-guest':
+            //     setBringAGuest(event.target.checked);
+            //     break;
             default:
         }
     }
     const handleButtonClick:FormEventHandler<HTMLFormElement>  = async(e) => {
-        const arrayToStore = [fName, lName, email, bringAGuest ? 'Yes': 'No'];
+        const arrayToStore = [fName, lName, email];
         e.preventDefault();
         try{
             const id = toast.info('Please wait', toastConfig);
@@ -81,11 +81,11 @@ export default function FormComponent() {
                 <input name="last-name" value={lName} type="text" id="last-name" placeholder="Last name" onChange={onInputChange} required />
             </div>
             <input name="email" type="email" id="email" value={email} className="row" placeholder="Email" onChange={onInputChange} required />
-            <div className="row non-center-row">
+            {/* <div className="row non-center-row">
                 
                 <input name="bring-a-guest" type="checkbox" checked={bringAGuest} id='bring-a-guest' title="Will you bring a guest?" onChange={onInputChange} />
                 <label htmlFor="bring-a-guest">Will you bring a guest?</label>
-            </div>
+            </div> */}
             <button type="submit" className="form-button">RSVP</button>
             
         </form>
