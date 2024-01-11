@@ -2,6 +2,7 @@
 module.exports = {
     env: {
         GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+        NEXT_PRIVATE_PASSWORD: process.env.NEXT_PRIVATE_PASSWORD
       },
     webpack: (config, { isServer }) => {
       if (!isServer) {
